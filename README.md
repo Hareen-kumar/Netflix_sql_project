@@ -48,7 +48,7 @@ SELECT
 COUNT(*) FROM netflix_titles;
 ```
 
-**Objective:**To determine the total number of records in the dataset, giving an idea of the dataset’s size.
+**Objective:** To determine the total number of records in the dataset, giving an idea of the dataset’s size.
 
 ### 2.  Find all movies released in 2020.
 
@@ -73,13 +73,12 @@ SELECT *
 ### 4.  Count the number of movies vs TV shows.
 
 ```sql
-SELECT
- type, COUNT(*) 
+SELECT type, COUNT(*) 
 	FROM netflix_titles 
 	GROUP BY type;
 ```
 
-**Objective:**To compare how many Movies vs TV Shows are available in the dataset.
+**Objective:** To compare how many Movies vs TV Shows are available in the dataset.
 
 ### 5. Get the latest 10 movies added to Netflix.
 
@@ -91,7 +90,7 @@ SELECT *
         ORDER BY date_added DESC LIMIT 10;
 ```
 
-**Objective:**To retrieve the most recently added movies to Netflix.
+**Objective:** To retrieve the most recently added movies to Netflix.
 
 ### 6. Find all titles containing the word ‘Love’.
 
@@ -106,8 +105,7 @@ SELECT *
 ### 7. Find all TV Shows available in India.
 
 ```sql
-SELECT
-title, country
+SELECT title, country
 FROM netflix_titles
 WHERE type = 'TV Show' AND country = 'India';
 ```
@@ -117,8 +115,7 @@ WHERE type = 'TV Show' AND country = 'India';
 ### 8.  Find movies that are exactly 90 minutes long.
 
 ```sql
-SELECT
-title, duration
+SELECT title, duration
 FROM netflix_titles
 WHERE type = 'Movie' AND duration = '90 min';
 ```
@@ -133,13 +130,12 @@ DISTINCT listed_in
 FROM netflix_titles;
 ```
 
-**Objective:**To retrieve all unique genres available on Netflix, helping in content classification and analysis.
+**Objective:** To retrieve all unique genres available on Netflix, helping in content classification and analysis.
 
 ### 10.Which countries produce the most movies?
 
 ```sql
-SELECT
-country, COUNT(*) AS movie_count  
+SELECT country, COUNT(*) AS movie_count  
 FROM netflix_titles  
 WHERE type = 'Movie'  
 AND country IS NOT NULL  
