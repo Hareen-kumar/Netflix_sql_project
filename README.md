@@ -125,8 +125,7 @@ WHERE type = 'Movie' AND duration = '90 min';
 ### 9.What are the different genres available on Netflix?
 
 ```sql
-SELECT
-DISTINCT listed_in
+SELECT DISTINCT listed_in
 FROM netflix_titles;
 ```
 
