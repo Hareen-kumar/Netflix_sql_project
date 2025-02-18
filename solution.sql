@@ -14,7 +14,7 @@ CREATE TABLE netflix_titles
 	description VARCHAR(250) 
 );
 SELECT * FROM  netflix_titles;
-SELECT COUNT(*) FROM  netflix_titles ;
+SELECT COUNT(*) FROM  netflix_titles;
 
  --13 Business problems 
  
